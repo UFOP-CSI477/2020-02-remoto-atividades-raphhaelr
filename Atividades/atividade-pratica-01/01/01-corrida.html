@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Corrida</title>
+    <script src="01-corrida.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Apuração de resultados</h1>
+    </header>
+
+    <div>
+        <h2>Categoria:</h2>
+        <p>carrinhos de rolimã</p>
+
+        <form action="post" name="frmAddCompetitor">
+            <div>
+                <label>Largada:</label>
+                <input type="text" name="start"/>
+            </div>
+
+            <div>
+                <label>Competidor:</label>
+                <input type="text" name="name"/>
+            </div>
+
+            <div>
+                <label>Tempo(s):</label>
+                <input type="text" name="time"/>
+            </div>
+
+            <button type="button" onclick="insertCompetitor()">Inserir</button>
+        </form>
+
+        <p id="competitorsLength">Total: 0</p>
+
+        <table id="tableInit">
+            <thead>
+                <tr>Largada</tr>
+                <tr>Competidor(a)</tr>
+                <tr>Tempo(s)</tr>
+            </thead>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+
+        <div>
+            <button type="button" onclick="showResults()">Apresentar resultados</button>
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>Posição</tr>
+                    <tr>Largada</tr>
+                    <tr>Competidor(a)</tr>
+                    <tr>Tempo(s)</tr>
+                    <tr>Resultado</tr>
+                </thead>
+                <tbody id="tableBodyResults">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
