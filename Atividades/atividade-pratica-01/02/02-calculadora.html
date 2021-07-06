@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="02-calculadora.css">
+    <script src="02-calculadora.js"></script>
+    <title>Calculadora</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+
+    <div class="container">
+
+
+
+        <div class="form-group" style="width: 50%;">
+            <input id="result" type="text" name="start" class="form-control" disabled style="margin-bottom: 1rem;" />
+        </div>
+
+
+        <div class="calculadora">
+            <div class="first">
+                <div class="inside">
+                    <input type="button" value="AC" style="width: 100%;" onclick="reset()">
+                </div>
+                <div class="inside">
+                    <input type="button" value="/" style="width: 100%;" onclick="addOperator('/')">
+                </div>
+            </div>
+
+            <div class="second">
+                <div class="insideFour">
+                    <input type="button" value="7" style="width: 100%;" onclick="addNumber('7')">
+                </div>
+                <div class="insideFour">
+                    <input type="button" value="8" style="width: 100%;" onclick="addNumber('8')">
+                </div class="insideFour">
+                <div class="insideFour">
+                    <input type="button" value="9" style="width: 100%;" onclick="addNumber('9')">
+                </div>
+                <div class="insideFour">
+                    <input type="button" value="*" style="width: 100%;" onclick="addOperator('*')">
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="insideFour"><input type="button" value="4" style="width: 100%;" onclick="addNumber('4')"></div>
+                <div class="insideFour"><input type="button" value="5" style="width: 100%;" onclick="addNumber('5')"></div>
+                <div class="insideFour"><input type="button" value="6" style="width: 100%;" onclick="addNumber('6')"></div>
+                <div class="insideFour"><input type="button" value="-" style="width: 100%;" onclick="addOperator('-')"></div>
+            </div>
+
+            <div class="first">
+                <div class="insideFour"><input type="button" value="1" style="width: 100%;" onclick="addNumber('1')"></div>
+                <div class="insideFour"><input type="button" value="2" style="width: 100%;" onclick="addNumber('2')"></div>
+                <div class="insideFour"><input type="button" value="3" style="width: 100%;" onclick="addNumber('3')"></div>
+                <div class="insideFour"><input type="button" value="+" style="width: 100%;" onclick="addOperator('+')"></div>
+            </div>
+
+            <div class="first">
+                <div class="inside"><input type="button" value="0" style="width: 100%;" onclick="addNumber('0')"></div>
+                <div class="insideTree"><input type="button" value="." style="width: 100%;" onclick="addNumber('.')"></div>
+                <div class="insideTree"><input type="button" value="=" style="width: 100%;" onclick="calculate('=')"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

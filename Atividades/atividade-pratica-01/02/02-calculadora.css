@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+h1 {
+    margin-top: 1rem;
+    margin-left: 0.825rem;
+}
+
+body {
+    width: 50%;
+    background: #F0F0F5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.btn-primary {
+    margin: 0.5rem 0;
+}
+
+.calculadora {
+    width: 50%;
+}
+
+.first {
+    display: flex;
+}
+
+.second {
+    display: flex;
+}
+
+.inside {
+    width: 50%;
+}
+
+.insideFour {
+    width: 25%;
+}
+
+.insideTree {
+    width: 25%;
+}
+
