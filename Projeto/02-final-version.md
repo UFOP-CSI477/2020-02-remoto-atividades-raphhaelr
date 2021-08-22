@@ -7,8 +7,7 @@
 
 ### Resumo
 
-  O trabalho final objetivo o desenvolvimento de um sistema para divulgação e controle de vagas de estágios. A partir da ideia que divulgações sobre vagas de estágios ocorrem com frequência, o propósito desse projeto é solucionar o problema sobre as divulgações no e-mail que podem ficar perdidas ou misturadas com outros inúmeros e-mails e serem esquecidas. Por isso através de uma mini plataforma, deve ser possível visualizar essas vagas, seus detalhes, meios de contato ~e se já foi preenchida. É possível abrir o leque ao público externo, como empresas parceiras das universidades estarem aptos a realizarem publicações sobre vagas de estágios~.
-
+  O trabalho final objetivo o desenvolvimento de um sistema para divulgação e controle de vagas de estágios. A partir da ideia que divulgações sobre vagas de estágios ocorrem com frequência, o propósito desse projeto é solucionar o problema sobre as divulgações no e-mail que podem ficar perdidas ou misturadas com outros inúmeros e-mails e serem esquecidas. Por isso através de uma mini plataforma, deve ser possível visualizar essas vagas, seus detalhes e meios de contato.
 ### 1. Funcionalidades implementadas
 <!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
 
@@ -79,7 +78,7 @@ No geral, foi bem interessante, consegui fortalecer mais ainda meus conhecimento
   - Para realizar a instalação de suas dependências entrar no `./2020-02-remoto-atividades-raphhaelr/Projeto/web`.
   - Executar o comando `npm install` ou `yarn`.
   - Após a instalação das dependências do projeto, é possível executar o projeto.
-  - Para inicializar o projeto execute o comando `npm start` ou `yarn start`
+  - Para inicializar o projeto execute o comando no diretório `npm start` ou `yarn start` no diretório `./2020-02-remoto-atividades-raphhaelr/Projeto/web`.
   - Após a execução do comando, o projeto pode ser acessado através do endereço https://localhost:3000
 
 ### 6. Referências
@@ -87,4 +86,5 @@ No geral, foi bem interessante, consegui fortalecer mais ainda meus conhecimento
 - Typescript: https://www.typescriptlang.org/
 - Express: https://expressjs.com/pt-br/
 - Knex: https://knexjs.org/
+- UFOP: https://ufop.br/
 

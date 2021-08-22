@@ -9,8 +9,8 @@ export class SessionsController {
 
         const sessionModel = new Session(database)
 
-        const session = await sessionModel.create(email, password)
+        const { user, token } = await sessionModel.create(email, password)
 
-        return response.json({user: session, token: '1234567'})
+        return response.json({ user, token })
     }
 }

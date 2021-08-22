@@ -1,5 +1,7 @@
 import { compare } from 'bcryptjs'
 import Knex from 'knex';
+import { sign } from 'jsonwebtoken'
+import authConfig from '../config/authConfig';
 export class Session {
     constructor(private database: Knex) { }
 
@@ -16,8 +18,18 @@ export class Session {
             throw new Error('Incorrect email or password combination.')
         }
 
+        const {
+            secret,
+            expiresIn,
+        } = authConfig.jwt;
+
+        const token = sign({}, secret, {
+            subject: user.id,
+            expiresIn,
+        });
+
         delete user.password
 
-        return user
+        return { user, token }
     }
 }
