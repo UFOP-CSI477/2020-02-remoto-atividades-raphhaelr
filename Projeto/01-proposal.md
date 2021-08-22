@@ -7,7 +7,7 @@
 
 ### Resumo
 
-  O trabalho final objetivo o desenvolvimento de um sistema para divulgação e controle de vagas de estágios. A partir da ideia que divulgações sobre vagas de estágios ocorrem com frequência, o propósito desse projeto é solucionar o problema sobre as divulgações no e-mail que podem ficar perdidas ou misturadas com outros inúmeros e-mails e serem esquecidas. Por isso através de uma mini plataforma, deve ser possível visualizar essas vagas, seus detalhes e meios de contato.
+  O trabalho final objetivo o desenvolvimento de um sistema para divulgação e controle de vagas de estágios. A partir da ideia que divulgações sobre vagas de estágios ocorrem com frequência, o propósito desse projeto é solucionar o problema sobre as divulgações no e-mail que podem ficar perdidas ou misturadas com outros inúmeros e-mails e serem esquecidas. Por isso através de uma mini plataforma, deve ser possível visualizar essas vagas, seus detalhes, meios de contato e se já foi preenchida. É possível abrir o leque ao público externo, como empresas parceiras das universidades estarem aptos a realizarem publicações sobre vagas de estágios.
 
 <!-- Apresentar o tema. -->
 ### 1. Tema
@@ -39,11 +39,10 @@
 
   Neste trabalho não serão considerados:
 
-  - Diferença entre usuários, como por exemplo, administrador ou usuário "comum".
-
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
+  
   - Login.
   - Visualização das vagas.
   - Criar vagas.

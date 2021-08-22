@@ -1,8 +1,6 @@
 import { format } from 'date-fns';
 import { ICreateJobDTO } from 'dtos/ICreateJobDTO';
-import { ICreateUserDTO } from 'dtos/ICreateUserDTO'
 import Knex from 'knex';
-
 interface IJob {
     id: string;
     name: string;
@@ -13,8 +11,7 @@ interface IJob {
     email: string;
     phone?: string;
     created_at?: string;
- }
-
+}
 export class Job {
     constructor(private database: Knex) { }
 
