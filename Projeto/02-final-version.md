@@ -18,13 +18,13 @@
     - Deletar
     - Visualizar e pesquisar
 
-  - Gerenciar usuários. O sistema deve contemplar também o controle de usuários para que seja possível somente usuários credenciados divulgar as vagas no sistema.
+- Gerenciar usuários. O sistema deve contemplar também o controle de usuários para que seja possível somente usuários credenciados divulgar as vagas no sistema.
     - Criar
     - Atualizar
     - Deletar
     - Visualizar e pesquisar
 
-  - Autenticação de usuários. Para que seja possível usuários gerenciarem outros usuários e vagas de estágio, ele deve realizar login a partir de suas credenciais.
+- Autenticação de usuários. Para que seja possível usuários gerenciarem outros usuários e vagas de estágio, ele deve realizar login a partir de suas credenciais.
     - Realizar login
   
 ### 2. Funcionalidades previstas e não implementadas
@@ -54,6 +54,9 @@ No geral, foi bem interessante, consegui fortalecer mais ainda meus conhecimento
   - SGBD PostgreSQL instalado ou pode utilizar um container PostgreSQL no Docker.
     - PostgreSQL https://www.postgresql.org/
     - Docker: https://hub.docker.com/_/postgres
+  - NPM ou Yarn instalado.
+    - npm, já vem instalado com Node.js.
+    - yarn, disponível em: https://yarnpkg.com/
   - Criar uma database.
 
 - API
@@ -66,9 +69,18 @@ No geral, foi bem interessante, consegui fortalecer mais ainda meus conhecimento
       - database: 'sua_database_aqui'
       - user: 'seu_usuario_aqui',
       - password: 'sua_senha_aqui'
-  - Depois de realizar a alteração nas variáveis de conexão com o banco de dados, é necessário rodar as **migrations** para criação das tabelas no banco de dados
+  - Depois de realizar a alteração nas variáveis de conexão com o banco de dados, é necessário rodar as **migrations** para criação das tabelas no banco de dados.
     - Para isso na raiz do projeto (API) `./2020-02-remoto-atividades-raphhaelr/Projeto/api` execute o comando `npm knex:migrate:latest` ou `yarn knex:migrate:latest`
+  - Após as tabelas serem criadas através das migrations, o projeto está apto a ser inicializado.
+    - Para executar o servidor (API) executar o comando `npm dev` ou `yarn dev` na raiz do projeto `./2020-02-remoto-atividades-raphhaelr/Projeto/api`.
+    - Após a execução do comando a mensagem `Server started on PORT 3333` deve aparecer no terminal.
 
+- WEB
+  - Para realizar a instalação de suas dependências entrar no `./2020-02-remoto-atividades-raphhaelr/Projeto/web`.
+  - Executar o comando `npm install` ou `yarn`.
+  - Após a instalação das dependências do projeto, é possível executar o projeto.
+  - Para inicializar o projeto execute o comando `npm start` ou `yarn start`
+  - Após a execução do comando, o projeto pode ser acessado através do endereço https://localhost:3000
 
 ### 6. Referências
 
