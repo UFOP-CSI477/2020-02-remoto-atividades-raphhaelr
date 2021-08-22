@@ -7,14 +7,12 @@
 
 ### Resumo
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+  O trabalho final objetivo o desenvolvimento de um sistema para divulgação e controle de vagas de estágios. A partir da ideia que divulgações sobre vagas de estágios ocorrem com frequência, o propósito desse projeto é solucionar o problema sobre as divulgações no e-mail que podem ficar perdidas ou misturadas com outros inúmeros e-mails e serem esquecidas. Por isso através de uma mini plataforma, deve ser possível visualizar essas vagas, seus detalhes e meios de contato.
 
 <!-- Apresentar o tema. -->
 ### 1. Tema
 
-  O trabalho final tem como tema o desenvolvimento de um sistema para divulgação e controle de vagas de estágios. Então partir da ideia que divulgações sobre vagas de estágios ocorrem com frequência, o proposito desse trabalho é solucionar o problema que essas divulgações no e-mail podem ficar perdidas ou misturadas com outros inúmeros e-mails e serem esquecidas. Por isso por esse sistema, ou seja, uma mini plataforma, deve ser possível visualizar essas vagas, seus detalhes, meios de contato e se já foi preenchida. É possível abrir o leque ao público externo, como empresas parceiras das universidades estarem aptos a realizarem publicações sobre vagas de estágios.
-
-  
+  Sistema para gerenciamento de estágios - divulgação e controle.
 
 <!-- Descrever e limitar o escopo da aplicação. -->
 ### 2. Escopo
@@ -33,15 +31,26 @@
     - Deletar
     - Visualizar e pesquisar
 
+  - Autenticação de usuários. Para que seja possível usuários gerenciar usuários e vagas de estágio, ele deve realizar login.
+    - Realizar login
+
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
 ### 3. Restrições
 
-  Neste trabalho não serão considerados ...
+  Neste trabalho não serão considerados:
+
+  - Diferença entre usuários, como por exemplo, administrador ou usuário "comum".
 
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Protótipos para as páginas (descrever quais páginas) foram elaborados, e podem ser encontrados em...
+  - Login.
+  - Visualização das vagas.
+  - Criar vagas.
+  - Editar vagas.
+  - Visualização de usuários.
+  - Criar usuários.
+  - Editar usuários.
 
 ### 5. Referências
 
