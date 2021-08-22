@@ -12,5 +12,5 @@
 
 **Tema:** Gerenciamento de estágios - divulgação e controle.
 
-**Descrição:** A partir da ideia de que divulgações sobre vagas de estágios ocorrem com frequência e solucionar o problema de divulgações no e-mail que podem ficar perdidas, porque não disponibilizar essas vagas em um local como uma mini plataforma, onde seria possível visualizar essas vagas, seus detalhes, meios de contato ~e se já foi preenchida. É possível abrir o leque ao público externo, como empresas parceiras das universidades estarem aptos a realizarem publicações sobre vagas de estágios~.
+**Descrição:** A partir da ideia de que divulgações sobre vagas de estágios ocorrem com frequência e solucionar o problema de divulgações no e-mail que podem ficar perdidas, porque não disponibilizar essas vagas em um local como uma mini plataforma, onde seria possível visualizar essas vagas, seus detalhes, meios de contato e se já foi preenchida. É possível abrir o leque ao público externo, como empresas parceiras das universidades estarem aptos a realizarem publicações sobre vagas de estágios.
 
