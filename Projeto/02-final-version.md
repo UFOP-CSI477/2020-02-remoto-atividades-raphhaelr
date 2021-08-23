@@ -83,7 +83,9 @@ No geral, foi bem interessante, consegui fortalecer mais ainda meus conhecimento
   - Utilizar o usuário criado pela seed para efetuar **login**.
 
 **Usuário de acesso**
+
 **email:** usuario@email.com
+
 **senha:** 123456
 
 **Observação**: no diretório do projeto existe o arquivo de rotas utilizadas no Insomnia, basta realizar a importação do arquivo `Insomnia_UFOP_Jobs.json` no próprio Insomnia ou Postman para realizar testes na API.
