@@ -70,7 +70,7 @@ No geral, foi bem interessante, consegui fortalecer mais ainda meus conhecimento
       - password: 'sua_senha_aqui'
   - Depois de realizar a alteração nas variáveis de conexão com o banco de dados, é necessário rodar as **migrations** para criação das tabelas no banco de dados.
     - Para isso na raiz do projeto (API) `./2020-02-remoto-atividades-raphhaelr/Projeto/api` execute o comando `npm knex:migrate:latest` ou `yarn knex:migrate:latest`
-  - Após as tabelas serem criadas através das migrations, o projeto está apto a ser inicializado.
+  - Após as tabelas serem criadas através das migrations, execute o comando `npm knex:seed:run` ou `yarn knex:seed:run` na raiz do projeto(API) `./2020-02-remoto-atividades-raphhaelr/Projeto/api` para executar as seeds, isso fará com que alguns dados sejam criados no banco de dados.
     - Para executar o servidor (API) executar o comando `npm dev` ou `yarn dev` na raiz do projeto `./2020-02-remoto-atividades-raphhaelr/Projeto/api`.
     - Após a execução do comando a mensagem `Server started on PORT 3333` deve aparecer no terminal.
 
@@ -79,7 +79,14 @@ No geral, foi bem interessante, consegui fortalecer mais ainda meus conhecimento
   - Executar o comando `npm install` ou `yarn`.
   - Após a instalação das dependências do projeto, é possível executar o projeto.
   - Para inicializar o projeto execute o comando no diretório `npm start` ou `yarn start` no diretório `./2020-02-remoto-atividades-raphhaelr/Projeto/web`.
-  - Após a execução do comando, o projeto pode ser acessado através do endereço https://localhost:3000
+  - Após a execução do comando, o projeto pode ser acessado através do endereço https://localhost:3000.
+  - Utilizar o usuário criado pela seed para efetuar **login**.
+
+**Usuário de acesso**
+**email:** usuario@email.com
+**senha:** 123456
+
+**Observação**: no diretório do projeto existe o arquivo de rotas utilizadas no Insomnia, basta realizar a importação do arquivo `Insomnia_UFOP_Jobs.json` no próprio Insomnia ou Postman para realizar testes na API.
 
 ### 6. Referências
 

@@ -8,7 +8,9 @@
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "knex:migrate:make": "knex --knexfile src/database/knexfile.ts migrate:make -x ts",
     "knex:migrate:latest": "knex --knexfile src/database/knexfile.ts migrate:latest",
-    "knex:migrate:rollback": "knex --knexfile src/database/knexfile.ts migrate:rollback"
+    "knex:migrate:rollback": "knex --knexfile src/database/knexfile.ts migrate:rollback",
+    "knex:seed:make": "knex --knexfile src/database/knexfile.ts seed:make",
+    "knex:seed:run": "knex --knexfile src/database/knexfile.ts seed:run"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -17,7 +19,8 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.21",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "uuidv4": "^6.2.12"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",

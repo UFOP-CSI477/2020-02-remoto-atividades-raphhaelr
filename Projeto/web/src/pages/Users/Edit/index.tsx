@@ -101,12 +101,12 @@ export const EditUser: React.FC = () => {
                             </div>
 
                             <div>
-                                <label htmlFor="password">Senha:</label>
+                                <label htmlFor="password">Nova senha:</label>
                                 <input type="password" name='password' id="password" onChange={handleInputChange} placeholder="Digite apenas se for alterar a senha" value={user.password}/>
                             </div>
 
                             <div>
-                                <label htmlFor="password_confirmation">Confirme a senha:</label>
+                                <label htmlFor="password_confirmation">Confirme a nova senha:</label>
                                 <input type="password" name='password_confirmation' id="password_confirmation" onChange={handleInputChange} placeholder="Digite apenas se for alterar a senha" value={user.password_confirmation} />
                             </div>
 
