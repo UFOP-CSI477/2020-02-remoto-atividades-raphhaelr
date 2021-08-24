@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.list-group-a {
+    margin-left: 1rem;
+}
+
+input {
+    background: #FFFFFF;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 10px rgba(114, 30, 255, 0.1);
+    border-radius: 6px;
+    width: 18rem;
+    height: 2rem;
+}
+
+div.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+    background: #3D3D3D;
+}
+
+h1.title {
+    margin-left: 1.75rem;
+    text-align: left;
+    font-size: 2.25rem;
+    color: #fff;
+}
+
+h2.title {
+    margin: 1rem 2rem;
+    text-align: left;
+    font-size: 1.25rem;
+    color: #404040;
+}
+
+ul.menuBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.75rem;
+}
+
+#database {
+    width: 40%;
+    border-radius: 0.5rem;
+    margin-left: 1.75rem;
+}
+
+.introduction {
+    padding: 2rem 0;
+    box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.22);
+}
+
+h2.subTitle {
+    margin-left: 1.75rem;
+    text-align: left;
+    font-size: 1.5rem;
+}

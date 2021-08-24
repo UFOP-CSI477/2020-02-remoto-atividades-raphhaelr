@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/reports.css">
     <title>Sistema banco de dados</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Sistema de banco de dados web - Relatórios</h1>
+        <div class="headerContainer">
+            <h1 class="title">Sistema de banco de dados web</h1>
 
-        <div>
-            <ul>
+            <ul class="menuBar">
                 <li>
                     <a href="home.html">Home</a>
                 </li>
@@ -46,34 +51,42 @@
         </div>
     </header>
 
-    
 
-    <div>
-        <h2>Pessoas cadastradas</h2>
+
+    <div style="width: 100%;">
+        <div class="mainContainer">
+            <div class="titleContainer">
+                <h2>Pessoas cadastradas</h2>
+            </div>
+
+
+            <div class="tableContainer">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">E-mail</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Ana</th>
+                            <td>(31) 99988-7766</td>
+                            <td>ana@email.com</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">João</th>
+                            <td>(31) 99988-7766</td>
+                            <td>joão@email.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Telefone</th>
-            <th>E-mail</th>
-        </tr>
-
-        <tbody>
-            <tr>
-                <td>Ana</td>
-                <td>(31) 99988-7766</td>
-                <td>ana@email.com</td>
-            </tr>
-
-            <tr>
-                <td>João</td>
-                <td>(31) 99988-7766</td>
-                <td>joão@email.com</td>
-            </tr>
-        </tbody>
-    </table>
-
 </body>
 
 </html>
