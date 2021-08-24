@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { useCookies } from 'react-cookie'
 import { Link, Redirect, useHistory, } from 'react-router-dom'
 import { Header } from '../../../components/Header'
-import { useAuth } from '../../../hooks/auth'
 import { api } from '../../../services/api'
 import { Container, Content, Title, Details, CreateJobContainer, TitleContainer, ErrorContainer, ButtonContainer, ErrorText } from './styles'
 

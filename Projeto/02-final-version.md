@@ -95,5 +95,6 @@ No geral, foi bem interessante, consegui fortalecer mais ainda meus conhecimento
 - Typescript: https://www.typescriptlang.org/
 - Express: https://expressjs.com/pt-br/
 - Knex: https://knexjs.org/
+- React: https://pt-br.reactjs.org/
 - UFOP: https://ufop.br/
 
