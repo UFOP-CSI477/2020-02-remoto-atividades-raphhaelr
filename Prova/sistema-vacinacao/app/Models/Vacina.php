@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pessoa extends Model
+class Vacina extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'bairro', 'cidade', 'data_nascimento'];
+    protected $fillable = ['nome', 'fabricante', 'doses'];
+
 }

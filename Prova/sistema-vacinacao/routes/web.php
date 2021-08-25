@@ -1,6 +1,10 @@
 <?php
 
 use App\Models\Pessoa;
+use App\Http\Controllers\PessoaController;
+use App\Http\Controllers\VacinaController;
+use App\Http\Controllers\UnidadeController;
+use App\Http\Controllers\RegistroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +19,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
 
-Route::get('/pessoas', function () {
-    return Pessoa::all();
-});
+Route::resource('/pessoas', PessoaController::class);
+
+Route::resource('/vacinas', VacinaController::class);
+
+Route::resource('/unidades', UnidadeController::class);
+
+Route::resource('/registros', RegistroController::class);
+
+
 
