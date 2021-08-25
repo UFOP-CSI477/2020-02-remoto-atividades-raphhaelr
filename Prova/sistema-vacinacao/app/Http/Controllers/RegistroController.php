@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pessoa;
+use App\Models\Unidade;
+use App\Models\Vacina;
 use App\Models\Registro;
+use Exception;
 use Illuminate\Http\Request;
 
 class RegistroController extends Controller
@@ -14,7 +18,9 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        //
+        $registros = Registro::all();
+
+        return view('registros.index', ['registros' => $registros]);
     }
 
     /**
@@ -24,7 +30,11 @@ class RegistroController extends Controller
      */
     public function create()
     {
-        //
+        $pessoas = Pessoa::all();
+        $unidades = Unidade::all();
+        $vacinas = Vacina::all();
+
+        return view('registros.create', ['pessoas' => $pessoas, 'unidades' => $unidades, 'vacinas' => $vacinas]);
     }
 
     /**
@@ -35,7 +45,9 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Registro::create($request->all());
+        session()->flash('mensagem', 'Registro cadastrada com sucesso');
+        return redirect()->route('registros.index');
     }
 
     /**
@@ -46,7 +58,7 @@ class RegistroController extends Controller
      */
     public function show(Registro $registro)
     {
-        //
+        return view('registros.show', ['registro' => $registro]);
     }
 
     /**
@@ -57,7 +69,11 @@ class RegistroController extends Controller
      */
     public function edit(Registro $registro)
     {
-        //
+        $pessoas = Pessoa::all();
+        $unidades = Unidade::all();
+        $vacinas = Vacina::all();
+
+        return view('registros.edit', ['pessoas' => $pessoas, 'unidades' => $unidades, 'vacinas' => $vacinas, 'registro'=> $registro]);
     }
 
     /**
@@ -69,7 +85,12 @@ class RegistroController extends Controller
      */
     public function update(Request $request, Registro $registro)
     {
-        //
+        $registro->fill($request->all());
+        $registro->save();
+
+        session()->flash('mensagem', 'Registro atualizado com sucesso');
+
+        return redirect()->route('registros.index');
     }
 
     /**
@@ -80,6 +101,10 @@ class RegistroController extends Controller
      */
     public function destroy(Registro $registro)
     {
-        //
+        $registro->delete();
+
+        session()->flash('mensagem', 'Registro excluído com sucesso');
+
+        return redirect()->route('registros.index');
     }
 }

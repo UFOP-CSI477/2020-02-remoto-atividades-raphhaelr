@@ -2,27 +2,31 @@
 
 @section('conteudo')
 
+<a href="{{route('registros.create')}}">Cadastrar</a>
+
 <table class="table table-hover">
     <thead>
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Bairro</th>
-            <th scope="col">Cidade</th>
-            <th scope="col">Data nascimento</th>
+            <th scope="col">Pessoa</th>
+            <th scope="col">Unidade</th>
+            <th scope="col">Vacina</th>
+            <th scope="col">Dose</th>
+            <th scope="col">Data</th>
             <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
-        @foreach($pessoas as $pessoa)
+        @foreach($registros as $registro)
         <tr>
-            <td>{{$pessoa->id}}</td>
-            <td>{{$pessoa->nome}}</td>
-            <td>{{$pessoa->bairro}}</td>
-            <td>{{$pessoa->cidade}}</td>
-            <td>{{$pessoa->data_nascimento}}</td>
+            <td>{{$registro->id}}</td>
+            <td>{{$registro->pessoa->nome}}</td>
+            <td>{{$registro->unidade->nome}}</td>
+            <td>{{$registro->vacina->nome}}</td>
+            <td>{{$registro->dose}}</td>
+            <td>{{$registro->data}}</td>
             <td>
-                <a href="{{route('pessoas.edit', $pessoa->id)}}">Editar</a>
+                <a href="{{route('registros.show', $registro->id)}}">Exibir</a>
             </td>
         </tr>
         @endforeach

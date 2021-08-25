@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Unidade;
+use Exception;
 use Illuminate\Http\Request;
 
 class UnidadeController extends Controller
@@ -82,9 +83,13 @@ class UnidadeController extends Controller
      */
     public function destroy(Unidade $unidade)
     {
-        $unidade->delete();
+        try {
+            $unidade->delete();
 
-        session()->flash('mensagem', 'Unidade excluída com sucesso');
+            session()->flash('mensagem', 'Unidade excluída com sucesso');
+        } catch (Exception $e) {
+            session()->flash('error', 'Essa unidade não pode ser excluída');
+        }
 
         return redirect()->route('unidades.index');
     }

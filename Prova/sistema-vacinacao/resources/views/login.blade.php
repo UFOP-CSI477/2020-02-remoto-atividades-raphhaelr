@@ -19,6 +19,9 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
+                    <a class="nav-link" href="{{route('vacinas.index')}}">Área geral</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="{{route('vacinas.index')}}">Vacinas</a>
                 </li>
                 <li class="nav-item active">
@@ -39,15 +42,9 @@
     </nav>
 
     @if(session('mensagem'))
-        <div class="alert alert-success">
-            {{session('mensagem')}}
-        </div>
-    @endif
-
-    @if(session('error'))
-        <div class="alert alert-danger">
-            {{session('error')}}
-        </div>
+    <div class="alert alert-success">
+        {{session('mensagem')}}
+    </div>
     @endif
 
     @yield('conteudo')

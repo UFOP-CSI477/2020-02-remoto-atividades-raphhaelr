@@ -33,7 +33,7 @@ class RegistroFactory extends Factory
             'unidade_id' => $this->faker->randomElement($unidades_ids),
             'vacina_id' => $this->faker->randomElement($vacinas_ids),
             'dose' => $this->faker->numberBetween(1, 10),
-            'data' => $this->faker->dateTime('now')
+            'data' => $this->faker->date('Y-m-d')
         ];
     }
 }

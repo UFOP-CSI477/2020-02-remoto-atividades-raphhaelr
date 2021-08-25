@@ -59,6 +59,7 @@ class PessoaController extends Controller
      */
     public function edit(Pessoa $pessoa)
     {
+
         return view('pessoas.edit', ['pessoa' => $pessoa]);
     }
 
