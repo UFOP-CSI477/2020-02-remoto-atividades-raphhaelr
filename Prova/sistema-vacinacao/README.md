@@ -1,5 +1,3 @@
-navegador, PHP/Laravel ou outro framework, Banco de dados
-
 ### Navegador ###
 Firefox 91.0.2 (64-bits)
 ### PHP/Laravel ###
