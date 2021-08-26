@@ -8,6 +8,7 @@ use App\Models\Vacina;
 use App\Models\Registro;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RegistroController extends Controller
 {
@@ -73,7 +74,7 @@ class RegistroController extends Controller
         $unidades = Unidade::all();
         $vacinas = Vacina::all();
 
-        return view('registros.edit', ['pessoas' => $pessoas, 'unidades' => $unidades, 'vacinas' => $vacinas, 'registro'=> $registro]);
+        return view('registros.edit', ['pessoas' => $pessoas, 'unidades' => $unidades, 'vacinas' => $vacinas, 'registro' => $registro]);
     }
 
     /**

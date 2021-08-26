@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Pessoa;
 use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\VacinaController;
 use App\Http\Controllers\UnidadeController;
 use App\Http\Controllers\RegistroController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,20 +19,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
-
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
-
-Route::resource('/pessoas', PessoaController::class);
-
-Route::resource('/vacinas', VacinaController::class);
-
-Route::resource('/unidades', UnidadeController::class);
-
-Route::resource('/registros', RegistroController::class);
+    return view('principal');
+})->name('principal');
 
 
+Route::resource('/pessoas', PessoaController::class)->middleware('auth');
 
+Route::resource('/vacinas', VacinaController::class)->middleware('auth');
+
+Route::resource('/unidades', UnidadeController::class)->middleware('auth');
+
+Route::resource('/registros', RegistroController::class)->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

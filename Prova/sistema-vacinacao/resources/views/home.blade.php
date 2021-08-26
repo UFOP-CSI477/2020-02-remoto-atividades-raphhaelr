@@ -1,56 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('principal')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Vacinação COVID-19 2021</title>
-</head>
+@section('conteudo')
+<div style="margin-top: 2rem;" class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Área geral') }}</div>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{route('home')}}">VACINAÇÃO COVID-19</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <h3 style="margin-left: 1rem;">Total geral vacinadas aplicadas:</h3>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Aplicação</th>
+                            <th scope="col">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dose única</td>
+                            <td>{{$dose_unica}}</td>
+                        </tr>
 
-        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('vacinas.index')}}">Vacinas</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('pessoas.index')}}">Pessoas</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('unidades.index')}}">Unidades</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('registros.index')}}">Registros</a>
-                </li>
-            </ul>
+                        <tr>
+                            <td>Primeira dose</td>
+                            <td>{{$primeira_dose}}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Segunda dose</td>
+                            <td>{{$segunda_dose}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-left: 1rem; margin-top: 2rem;">Total de aplicações por vacinas:</h3>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Vacina</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Porcentagem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($vacinas as $vacina)
+                        <tr>
+                            <td>{{$vacina->nome}}</td>
+                            <td>{{$vacina->qtd}}</td>
+                            <td>{{number_format(($vacina->qtd/$registros)*100, 2, ',')}}%</td>
+
+                        </tr>
+
+                        @endforeach
+                        <tr>
+                            <td>TOTAL GERAL</td>
+                            <td>{{$registros}}</td>
+                            <td>{{number_format(($registros/$registros)*100, 2, ',')}}%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <div>
-            <a style="margin-right: 2rem;" href="/login">Login</a>
-        </div>
-    </nav>
-
-    @if(session('mensagem'))
-        <div class="alert alert-success">
-            {{session('mensagem')}}
-        </div>
-    @endif
-
-    @if(session('error'))
-        <div class="alert alert-danger">
-            {{session('error')}}
-        </div>
-    @endif
-
-    @yield('conteudo')
-</body>
-
-</html>
+    </div>
+</div>
+@endsection
