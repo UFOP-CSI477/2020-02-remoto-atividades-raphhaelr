@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        
+   <script src="05-carregamento-api.js"></script>
+    
+
+    <title>Busca por CEP</title>
+</head>
+
+<body>
+
+   
+
+
+    <div style="margin: 2rem;">
+        
+            <h2>Busca endereço por CEP</h2>
+
+
+        
+
+            <form method="POST" action="" name="formData">
+                <div>
+                    <label for="cep_form" class="form-label">CEP:</label>
+                    <input type="text" name="cep_form" id="cep_form" class="form-control" />
+                </div>
+
+                <input type="button" value="Buscar" class="btn btn-primary" style="margin-top: 1rem;" onclick="loadData()">
+            </form>
+            
+            <div style="margin-top: 2rem;">
+                <p id="cep"></p>
+                <p id="logradouro"></p>
+                <p id="complemento"></p>
+                <p id="bairro"></p>
+                <p id="localidade"></p>
+                <p id="uf"></p>
+            </div>
+
+    </div>
+
+</body>
+
+</html>
